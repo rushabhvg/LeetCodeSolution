@@ -22,25 +22,15 @@ https://www.linkedin.com/in/rushabhvg/
 class Solution {
 public:
     ListNode* middleNode(ListNode* head) {
-        ListNode *ptr=head;
-        int cnt=0;
-        while(ptr!=NULL) {
-            cnt+=1;
-            ptr=ptr->next;
+        ListNode *ptrMiddle=head;
+        ListNode *ptrEnd=head;
+
+        while( (ptrEnd!=NULL) && (ptrEnd->next!=NULL) ) {
+            ptrEnd=ptrEnd->next->next;
+            ptrMiddle=ptrMiddle->next;
         }
 
-        // if(cnt%2==0) {
-        //     cnt/=2;
-        // } else {
-        //     cnt /=2 ;
-        // }
-        cnt/=2;
-        ptr=head;
-        while(cnt>0) {
-            ptr=ptr->next;
-            cnt--;
-        }
-        return ptr;
+        return ptrMiddle;
     }
 };
 
