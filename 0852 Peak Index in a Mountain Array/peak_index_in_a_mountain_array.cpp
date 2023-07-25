@@ -15,14 +15,14 @@ public:
         int b=0, e=arr.size()-1;
         int mid;
         while(b<e) {
-            mid = b + (e-b)/2;
+            mid = (b + e)/2;
             if(arr[mid]<arr[mid+1]) {
-                e = mid - 1;
+                e = mid + 1;
             } else {
                 b = mid+1;
             }
         }
-        return b;
+        return e;
     }
 };
 
