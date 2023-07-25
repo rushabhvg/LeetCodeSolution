@@ -17,12 +17,12 @@ public:
         while(b<e) {
             mid = (b + e)/2;
             if(arr[mid]<arr[mid+1]) {
-                e = mid + 1;
+                b = mid + 1;
             } else {
-                b = mid+1;
+                e = mid;
             }
         }
-        return e;
+        return b;
     }
 };
 
