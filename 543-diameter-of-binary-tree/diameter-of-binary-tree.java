@@ -24,12 +24,15 @@ https://www.linkedin.com/in/rushabhvg/
  *     }
  * }
  */
+
 class Solution {
     int mx = 0;
+    
     public int diameterOfBinaryTree(TreeNode root) {
         mxDpth(root);
         return mx;
     }
+
     private int mxDpth(TreeNode root) {
         if(root == null) return 0;
         int lft = mxDpth(root.left);
