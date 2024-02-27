@@ -1,3 +1,14 @@
+/*
+By Rushabh Gala
+rushabhvg
+GitHub:
+https://github.com/rushabhvg
+StackOverflow:
+https://stackoverflow.com/users/16571212/rushabhvg
+LinkedIn:
+https://www.linkedin.com/in/rushabhvg/
+*/
+
 /**
  * Definition for a binary tree node.
  * public class TreeNode {
@@ -23,3 +34,14 @@ class Solution {
         return false;
     }
 }
+
+/*
+By Rushabh Gala
+rushabhvg
+GitHub:
+https://github.com/rushabhvg
+StackOverflow:
+https://stackoverflow.com/users/16571212/rushabhvg
+LinkedIn:
+https://www.linkedin.com/in/rushabhvg/
+*/
