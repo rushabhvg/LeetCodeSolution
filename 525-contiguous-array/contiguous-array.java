@@ -11,19 +11,21 @@ https://www.linkedin.com/in/rushabhvg/
 
 class Solution {
     public int findMaxLength(int[] nums) {
-        Map<Integer, Integer> mp = new HashMap<>();
-        mp.put(0, -1);
-        int mx = 0;
-        int cnt = 0;
-        for(int i=0; i<nums.length; i++) {
-            cnt = cnt + (nums[i]==1 ? 1 : -1);
-            if(mp.containsKey(cnt)) {
-                mx = Math.max(mx, i-mp.get(cnt));
+        int N = nums.length;
+        int[] mp = new int[2*N+2];
+        int curr = N;
+        int res = 0;
+        for(int i=0; i<N; i++) {
+            curr += (nums[i]<<1) - 1;
+            if(curr == N) {
+                res = i+1;
+            } else if(mp[curr]==0) {
+                mp[curr] = i+1;
             } else {
-                mp.put(cnt, i);
+                res = Math.max(res, i-mp[curr]+1);
             }
         }
-        return mx;
+        return res;
     }
 }
 
