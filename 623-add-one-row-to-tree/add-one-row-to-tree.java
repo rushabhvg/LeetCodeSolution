@@ -25,7 +25,7 @@ https://www.linkedin.com/in/rushabhvg/
  * }
  */
 class Solution {
-    private TreeNode helper(TreeNode root, int depth, int d, int val, boolean left, boolean right) {
+    private TreeNode helper(TreeNode root, int depth, int d, int val, boolean left) {
         if(d==depth) {
             TreeNode node = new TreeNode(val);
             if(left) node.left = root;
@@ -33,12 +33,12 @@ class Solution {
             return node;
         }
         if(root==null) return null;
-        root.left = helper(root.left, depth, d+1, val, true, false);
-        root.right = helper(root.right, depth, d+1, val, false, true);
+        root.left = helper(root.left, depth, d+1, val, true);
+        root.right = helper(root.right, depth, d+1, val, false);
         return root;
     }
     public TreeNode addOneRow(TreeNode root, int val, int depth) {
-        return helper(root, depth, 1, val, true, false);
+        return helper(root, depth, 1, val, true);
     }
 }
 
