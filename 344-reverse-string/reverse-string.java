@@ -11,7 +11,7 @@ https://www.linkedin.com/in/rushabhvg/
 
 class Solution {
     public void reverseString(char[] s) {
-        char ext = s[0];
+        char ext;
         int n = s.length-1;
         int st = 0;
         while(st<n) {
