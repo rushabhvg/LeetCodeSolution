@@ -11,15 +11,11 @@ https://www.linkedin.com/in/rushabhvg/
 
 class Solution {
     public void reverseString(char[] s) {
-        char ext;
-        int n = s.length-1;
-        int st = 0;
-        while(st<n) {
-            ext = s[st];
-            s[st] = s[n];
-            s[n] = ext;
-            st++;
-            n--;
+        int n = s.length;
+        for(int i=0; i<n/2; i++) {
+            s[i] ^= s[n-i-1];
+            s[n-1-i] ^= s[i];
+            s[i] ^= s[n-i-1];
         }
         return ;
     }
