@@ -27,7 +27,7 @@ class Solution {
 
         int tot = 0;
         for(int w:worker) {
-            if(w>maxDiff) {
+            if(w>=maxDiff) {
                 tot += mxProfit[maxDiff];
             } else {
                 tot += mxProfit[w];
