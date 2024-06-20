@@ -17,7 +17,7 @@ class Solution {
             return position[n-1] - position[0];
         }
         // BS
-        int low = 1, high = position[n-1] - position[0];
+        int low = 1, high = (position[n-1] - position[0])/(m-1);
         int ans = -1;
         while(low<=high) {
             int mid = low + (high-low)/2;
