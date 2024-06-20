@@ -20,7 +20,7 @@ class Solution {
         int low = 1, high = (position[n-1] - position[0])/(m-1);
         int ans = -1;
         while(low<=high) {
-            int mid = low + (high-low)/2;
+            int mid = (low + high)/2;
             int last = position[0], balls=1;
             for(int i=1; i<n; i++) {
                 if(position[i]-last>=mid) {
