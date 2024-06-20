@@ -29,13 +29,12 @@ class Solution {
                 }
             }
             if(balls>=m) {
-                ans = mid;
                 low = mid+1;
             } else {
                 high = mid-1;
             }
         }
-        return ans;
+        return high;
     }
 }
 
