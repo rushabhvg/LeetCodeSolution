@@ -16,8 +16,7 @@ class Solution {
         while(cpy>0) {
             int rm = cpy%10;
             cpy /= 10;
-            rev *= 10;
-            rev += rm;
+            rev = rev*10 + rm;
         }
         return rev == x;
     }
