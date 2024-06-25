@@ -18,11 +18,10 @@ class Solution {
         }
     }
     public void rotate(int[] nums, int k) {
-        int n = nums.length;
-        k %= n;
-        rvrs(nums, 0, n-1);
+        k %= nums.length;
+        rvrs(nums, 0, nums.length-1);
         rvrs(nums, 0, k-1);
-        rvrs(nums, k, n-1);
+        rvrs(nums, k, nums.length-1);
     }
 }
 
