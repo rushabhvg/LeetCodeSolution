@@ -10,20 +10,20 @@ https://www.linkedin.com/in/rushabhvg/
 */
 
 class Solution {
+    private void rvrs (int[] nums, int st, int ed) {
+        while(st<ed) {
+            nums[st] ^= nums[ed];
+            nums[ed] ^= nums[st];
+            nums[st++] ^= nums[ed--];
+        }
+    }
     public void rotate(int[] nums, int k) {
         int n = nums.length;
-        while(k>=n) {
-            k -= n;
-        };
+        k %= n;
         if(k==0) return ;
-        int[] arr = new int[(2*n)-1];
-        for(int i=0; i<arr.length; i++) {
-            arr[i] = nums[i%n];
-        }
-        int st = n-k;
-        for(int i=0; i<n; i++) {
-            nums[i] = arr[st+i];
-        }
+        rvrs(nums, 0, n-1);
+        rvrs(nums, 0, k-1);
+        rvrs(nums, k, n-1);
     }
 }
 
