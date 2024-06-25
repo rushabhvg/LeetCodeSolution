@@ -20,7 +20,6 @@ class Solution {
     public void rotate(int[] nums, int k) {
         int n = nums.length;
         k %= n;
-        if(k==0) return ;
         rvrs(nums, 0, n-1);
         rvrs(nums, 0, k-1);
         rvrs(nums, k, n-1);
