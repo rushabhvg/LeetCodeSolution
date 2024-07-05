@@ -42,7 +42,6 @@ class Solution {
             }
         }
         if(arr.size()<=1) return ans;
-        Collections.sort(arr);
         ans[0] = Integer.MAX_VALUE;
         for(int j=0; j<arr.size()-1; j++) {
             // System.out.print(" " + arr.get(j) );
