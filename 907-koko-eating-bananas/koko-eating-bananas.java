@@ -11,9 +11,10 @@ https://www.linkedin.com/in/rushabhvg/
 
 class Solution {
     public int minEatingSpeed(int[] piles, int h) {
-        int st = 1;
-        int end = 1000000000;
+        Arrays.sort(piles);
         int n = piles.length;
+        int st = 1;
+        int end = piles[n-1];
         int mid = 1;
         while(st<end) {
             mid = (st+end)/2;
