@@ -20,8 +20,9 @@ class Solution {
             mid = (st+end)/2;
             int time = 0;
             for(int i=0; i<n; i++) {
-                time += (piles[i]/mid) + (piles[i]%mid>0 ? 1 : 0);
-                // time += (piles[i]+mid-1)/mid;
+                // time += (piles[i]/mid) + (piles[i]%mid>0 ? 1 : 0);
+                time += (piles[i]+mid-1)/mid;
+                if(time>h) break;
             }
             if(time>h) {
                 st = mid+1;
