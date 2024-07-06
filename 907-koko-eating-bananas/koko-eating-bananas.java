@@ -19,13 +19,10 @@ class Solution {
         while(st<end) {
             mid = (st+end)/2;
             int time = 0;
-            // System.out.print(st+ " " + mid + " " + end + " -> ");
             for(int i=0; i<n; i++) {
-                // time += (piles[i]/mid) + (piles[i]%mid>0 ? 1 : 0);
-                time += (piles[i]+mid-1)/mid;
+                time += (piles[i]/mid) + (piles[i]%mid>0 ? 1 : 0);
+                // time += (piles[i]+mid-1)/mid;
             }
-            // System.out.print(time + "\n");
-            // if(time==h) return mid;
             if(time>h) {
                 st = mid+1;
             } else {
