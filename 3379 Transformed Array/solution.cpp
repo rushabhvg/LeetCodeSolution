@@ -1,0 +1,34 @@
+/*
+By Rushabh Gala
+rushabhvg
+GitHub:
+https://github.com/rushabhvg
+StackOverflow:
+https://stackoverflow.com/users/16571212/rushabhvg
+LinkedIn:
+https://www.linkedin.com/in/rushabhvg/
+*/
+
+class Solution {
+public:
+    vector<int> constructTransformedArray(vector<int>& nums) {
+        int n = nums.size();
+        vector<int> ans(n);
+        for (int i = 0; i < n; i++) {
+            int idx = ( ( (i + nums[i]) % n + n) % n);
+            ans[i] = nums[idx];
+        }
+        return ans;
+    }
+};
+
+/*
+By Rushabh Gala
+rushabhvg
+GitHub:
+https://github.com/rushabhvg
+StackOverflow:
+https://stackoverflow.com/users/16571212/rushabhvg
+LinkedIn:
+https://www.linkedin.com/in/rushabhvg/
+*/
